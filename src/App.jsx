@@ -1,11 +1,12 @@
-import React from "react";
-import BotsPage from "./BotsPage";
-import "./App.css";
+import { useState } from "react";
+import BotsPage from './components/BotsPage'
+
+
 
 function App() {
   return (
     <div className="App">
-      <BotsPage />
+      <BotsPage/>
     </div>
   );
 }

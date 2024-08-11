@@ -1,5 +1,4 @@
 import React from "react";
-import BotCard from "./BotCard";
 import { ssrExportAllKey } from "vite/runtime";
 
 function YourBotArmy({ bots, releaseBot, dischargeBot }) {
