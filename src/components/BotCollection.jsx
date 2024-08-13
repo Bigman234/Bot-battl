@@ -1,24 +1,18 @@
 import React from "react";
 import BotCard from "./BotCard";
 
-
-function BotCollection({ bots, enlistBot }) {
+function BotCollection({ bots, enlistBot, selectBot, filterBotsByClass }) {
   return (
-    <div className="ui four column grid">
-      <div className="row">
-        {bots.map(
-          (bot) => (
-            console.log(bot),
-            (
-              <BotCard
-                key={bot.id}
-                bot={bot}
-                handleClick={() => enlistBot(bot)}
-              />
-            )
-          )
-        )}
-      </div>
+    <div className="bot-collection">
+      <h2>Bot Collection</h2>
+      {bots.map((bot) => (
+        <BotCard
+          key={bot.id}
+          bot={bot}
+          handleClick={() => selectBot(bot)}
+          handleEnlist={() => enlistBot(bot)}
+        />
+      ))}
     </div>
   );
 }
