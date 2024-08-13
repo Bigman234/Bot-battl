@@ -1,0 +1,137 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1e1e1e; 
+  color: #85c51e; 
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.bot-collection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.bot-card {
+  background-color: #2d2d2d;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.bot-card:hover {
+  transform: translateY(-5px);
+}
+
+.bot-avatar {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: #333; 
+}
+
+.bot-details {
+  padding: 15px;
+}
+
+.bot-name {
+  font-size: 1.5rem;
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+.bot-catchphrase {
+  font-size: 0.9rem;
+  color: #ddd; 
+  word-wrap: break-word;
+  height: 60px; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bot-catchphrase:hover {
+  white-space: normal;
+  overflow: visible;
+  max-height: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.bot-attribute {
+  font-size: 0.85rem;
+  color: #bbb; 
+  margin-bottom: 5px;
+}
+
+.your-bot-army {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.your-bot-army h2 {
+  text-align: center;
+  color: #ffd700;
+  margin-bottom: 20px;
+}
+
+.army-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.army-bot-card {
+  background-color: #3a3a3a;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.army-bot-card:hover {
+  transform: translateY(-5px);
+}
+
+.army-bot-name {
+  font-size: 1.3rem;
+  color: #ffd700; 
+  margin-top: 10px;
+}
+
+.army-bot-catchphrase {
+  font-size: 0.9rem;
+  color: #ddd;
+  padding: 0 10px;
+  height: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffd700; 
+  color: #1e1e1e;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #e5c100;
+}
