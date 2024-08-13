@@ -1,52 +1,16 @@
 import React from "react";
 
-export const botTypeClasses = {
-  Assault: "icon military",
-  Defender: "icon shield",
-  Support: "icon plus circle",
-  Medic: "icon ambulance",
-  Witch: "icon magic",
-  Captain: "icon star",
-};
-
-function BotCard({ bot, handleClick, handleDischarge }) {
+function BotCard({ bot, handleClick, handleEnlist, handleDischarge }) {
   return (
-    <div className="ui column">
-      <div className="ui card" onClick={handleClick}>
-        <div className="image">
-          <img alt="oh no!" src={bot.avatar_url} />
-        </div>
-        <div className="content">
-          <div className="header">
-            {bot.name}
-            <i className={botTypeClasses[bot.bot_class]} />
-          </div>
-          <div className="meta text-wrap">
-            <small>{bot.catchphrase}</small>
-          </div>
-        </div>
-        <div className="extra content">
-          <span>
-            <i className="icon heartbeat" />
-            {bot.health}
-          </span>
-          <span>
-            <i className="icon lightning" />
-            {bot.damage}
-          </span>
-          <span>
-            <i className="icon shield" />
-            {bot.armor}
-          </span>
-          <span>
-            <div className="ui center aligned segment basic">
-              <button className="ui mini red button" onClick={handleDischarge}>
-                x
-              </button>
-            </div>
-          </span>
-        </div>
-      </div>
+    <div className="bot-card" onClick={handleClick}>
+      <img src={bot.avatar_url} alt={bot.name} />
+      <h3>{bot.name}</h3>
+      <p>{bot.catchphrase}</p>
+      <p>Health: {bot.health}</p>
+      <p>Damage: {bot.damage}</p>
+      <p>Armor: {bot.armor}</p>
+      {handleEnlist && <button onClick={handleEnlist}>Enlist</button>}
+      {handleDischarge && <button onClick={handleDischarge}>Discharge</button>}
     </div>
   );
 }
